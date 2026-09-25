@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EROS INTERIOR</title>
+<meta name="description" content="EROS INTERIOR is an interior design studio at Regent Market, Amtala, West Bengal, designing and executing residential, office and commercial interiors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --ivory:#F4EFE7;
+  --paper:#FAF8F4;
+  --white:#FFFFFF;
+  --charcoal:#1F1D1A;
+  --charcoal-2:#2A2724;
+  --ink-2:#4B4640;
+  --warm-grey:#8A8279;
+  --line:#DCD4C8;
+  --line-dark:#403B36;
+  --bronze:#86664A;
+  --bronze-lt:#C2A27F;
+  --display:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --sans:"Jost", "Futura", "Century Gothic", "Helvetica Neue", Arial, sans-serif;
+  --gut:clamp(16px, 4.2vw, 56px);
+  --max:1360px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--ivory);color:var(--charcoal);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+section{scroll-margin-top:72px}
+
+.eyebrow{font:500 12px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--bronze);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;flex:none}
+.h2{font-size:clamp(38px,5.2vw,72px);line-height:1.04}
+.h2 em{font-style:italic;color:var(--bronze)}
+.lede{font-size:clamp(17px,1.35vw,19px);color:var(--ink-2);max-width:56ch;font-weight:300;line-height:1.75}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 28px;font:500 12.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn .arr{transition:transform .45s var(--ease)}
+.btn:hover .arr{transform:translateX(5px)}
+.btn-bronze{background:var(--bronze);color:var(--white)}
+.btn-bronze:hover{background:#6F533B}
+.btn-ivory{background:var(--ivory);color:var(--charcoal)}
+.btn-ivory:hover{background:var(--white)}
+.btn-ghost-light{border-color:rgba(255,255,255,.55);color:var(--white)}
+.btn-ghost-light:hover{background:rgba(255,255,255,.1);border-color:var(--white)}
+.btn-dark{background:var(--charcoal);color:var(--ivory)}
+.btn-dark:hover{background:#000}
+.link-arrow{display:inline-flex;align-items:center;gap:12px;font:500 12.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--charcoal);padding-block:10px;border-bottom:1px solid var(--charcoal);background:none;border-top:0;border-left:0;border-right:0;cursor:pointer}
+.link-arrow .arr{transition:transform .45s var(--ease)}
+.link-arrow:hover .arr{transform:translateX(6px)}
+
+/* Header */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);color:var(--white);transition:background .4s var(--ease),color .4s var(--ease),box-shadow .4s var(--ease)}
+.site-header.solid{background:rgba(250,248,244,.96);color:var(--charcoal);box-shadow:0 1px 0 var(--line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.logo{display:flex;align-items:baseline;gap:10px;text-decoration:none;white-space:nowrap}
+.logo b{font:500 23px/1 var(--display);letter-spacing:.2em}
+.logo span{font:400 11px/1 var(--sans);letter-spacing:.42em;opacity:.85}
+.nav{display:flex;align-items:center;gap:clamp(18px,2.2vw,34px)}
+.nav a{font:400 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;opacity:.9;padding-block:8px;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.nav a:hover::after{transform:scaleX(1)}
+.nav-cta{min-height:44px;padding:0 20px}
+.menu-btn{display:none;width:44px;height:44px;background:none;border:0;color:inherit;cursor:pointer;padding:0;align-items:center;justify-content:center}
+.menu-btn span{display:block;width:24px;height:1px;background:currentColor;position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:24px;height:1px;background:currentColor}
+.menu-btn span::before{top:-7px}.menu-btn span::after{top:7px}
+.mobile-menu{position:fixed;inset:0;z-index:60;background:var(--charcoal);color:var(--ivory);padding:calc(env(safe-area-inset-top,0px) + 18px) var(--gut) calc(env(safe-area-inset-bottom,0px) + 28px);display:flex;flex-direction:column}
+.mobile-menu .top{display:flex;justify-content:space-between;align-items:center;height:58px}
+.close-btn{width:44px;height:44px;background:none;border:0;color:inherit;font-size:30px;line-height:1;cursor:pointer;font-family:var(--sans);font-weight:300}
+.mobile-menu nav{display:flex;flex-direction:column;margin-top:40px}
+.mobile-menu nav a{font:400 34px/1.2 var(--display);text-decoration:none;padding-block:12px;border-bottom:1px solid var(--line-dark)}
+.mobile-menu .mm-foot{margin-top:auto;display:grid;gap:18px;font-size:14px;color:#BDB5AA}
+@media (max-width:980px){.nav{display:none}.menu-btn{display:inline-flex}}
+
+/* Hero */
+.hero{position:relative;min-height:clamp(600px,94svh,940px);display:flex;flex-direction:column;justify-content:flex-end;color:var(--white);background:#171513;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:52% 42%;animation:heroIn 2.4s var(--ease) both}
+@keyframes heroIn{from{transform:scale(1.06)}to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(18,16,14,.82) 0%,rgba(18,16,14,.5) 38%,rgba(18,16,14,.08) 72%),linear-gradient(0deg,rgba(18,16,14,.75) 0%,rgba(18,16,14,0) 42%),linear-gradient(180deg,rgba(18,16,14,.45) 0%,rgba(18,16,14,0) 18%)}
+.hero-inner{padding-block:140px 0}
+.hero .eyebrow{color:var(--bronze-lt)}
+.hero h1{font-size:clamp(50px,8.2vw,124px);line-height:.98;margin-top:26px;max-width:9.5em}
+.hero h1 em{font-style:italic;color:#E8D8C3}
+.hero-copy{margin-top:28px;max-width:40ch;font-size:clamp(17px,1.4vw,19px);font-weight:300;line-height:1.7;color:rgba(255,255,255,.86)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.hero-foot{margin-top:clamp(56px,8vw,96px);border-top:1px solid rgba(255,255,255,.22)}
+.hero-foot .wrap{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:24px;padding-block:22px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.78)}
+.hero-foot .cap{text-align:right;letter-spacing:.12em;text-transform:none;font-size:13px;font-style:italic;font-family:var(--display);color:rgba(255,255,255,.7)}
+@media (max-width:760px){
+  .hero{min-height:clamp(620px,100svh,900px)}
+  .hero-media img{object-position:50% 38%}
+  .hero::before{background:linear-gradient(0deg,rgba(18,16,14,.92) 0%,rgba(18,16,14,.6) 42%,rgba(18,16,14,.05) 72%),linear-gradient(180deg,rgba(18,16,14,.55) 0%,rgba(18,16,14,0) 20%)}
+  .hero-foot .wrap{grid-template-columns:1fr 1fr;font-size:11px;gap:10px 16px}
+  .hero-foot .cap,.hero-foot .hide-sm{display:none}
+  .hero-ctas .btn{flex:1 1 200px}
+}
+
+/* About */
+.about{padding-block:clamp(88px,11vw,160px)}
+.about-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:start}
+.about-text{grid-column:1/7;display:grid;gap:28px}
+.about-text .h2{margin-top:4px}
+.about-fig{grid-column:8/13;margin:0}
+.about-fig .frame{aspect-ratio:4/5;overflow:hidden;background:var(--line)}
+.about-fig img{width:100%;height:100%;object-fit:cover;object-position:74% 46%}
+.figcap{margin-top:12px;font:italic 400 14px/1.5 var(--display);color:var(--warm-grey)}
+.principles{grid-column:1/13;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:clamp(56px,7vw,96px);border-top:1px solid var(--line);padding-top:32px}
+.principles h3{font-size:24px;line-height:1.2}
+.principles p{margin-top:10px;font-size:15.5px;color:var(--ink-2);max-width:34ch}
+@media (max-width:900px){
+  .about-text,.about-fig{grid-column:1/-1}
+  .principles{grid-template-columns:1fr;gap:28px}
+}
+
+/* Services */
+.services{background:var(--paper);padding-block:clamp(88px,11vw,160px)}
+.svc-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.svc-head{grid-column:1/5;align-self:start;position:sticky;top:110px;display:grid;gap:26px}
+.svc-head .lede{font-size:17px}
+.svc-list{grid-column:6/13}
+.svc-group + .svc-group{margin-top:56px}
+.svc-group-label{font:500 12px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--warm-grey);padding-bottom:16px;border-bottom:1px solid var(--charcoal)}
+.svc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:24px;padding-block:24px;border-bottom:1px solid var(--line)}
+.svc h3{font-size:clamp(22px,2vw,27px);line-height:1.2}
+.svc p{font-size:15.5px;color:var(--ink-2);line-height:1.65}
+@media (max-width:900px){
+  .svc-head{grid-column:1/-1;position:static}
+  .svc-list{grid-column:1/-1;margin-top:40px}
+}
+@media (max-width:560px){.svc{grid-template-columns:1fr;gap:8px}}
+
+/* Projects */
+.work{padding-block:clamp(88px,11vw,160px)}
+.work-head{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end;margin-bottom:clamp(56px,7vw,96px)}
+.work-head > div{grid-column:1/8;display:grid;gap:22px}
+.work-head .lede{grid-column:9/13;font-size:16.5px}
+.h2-xl{font-size:clamp(46px,7.4vw,112px);line-height:.98}
+.h2-xl em{font-style:italic;color:var(--bronze)}
+@media (max-width:900px){.work-head > div,.work-head .lede{grid-column:1/-1}}
+
+.project{display:grid;grid-template-columns:repeat(12,1fr);gap:24px 24px;align-items:start}
+.project + .project{margin-top:clamp(96px,12vw,180px)}
+.pfig{margin:0;position:relative;overflow:hidden;background:#2a2622;cursor:pointer;display:block;padding:0;border:0;width:100%;text-align:left;color:var(--white)}
+.pfig img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.pfig:hover img,.pfig:focus-visible img{transform:scale(1.045)}
+.pfig .hover-tag{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:22px 24px;background:linear-gradient(0deg,rgba(18,16,14,.7),rgba(18,16,14,0));font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;opacity:0;transform:translateY(8px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.pfig .hover-tag .arr{transition:transform .5s var(--ease)}
+.pfig:hover .hover-tag,.pfig:focus-visible .hover-tag{opacity:1;transform:none}
+.pfig:hover .hover-tag .arr{transform:translateX(6px)}
+.p-main .pfig{aspect-ratio:5/4}
+.p-side .pfig{aspect-ratio:4/3}
+.p1 .p-main{grid-column:1/8}
+.p1 .p-aside{grid-column:9/13;display:grid;gap:40px}
+.p2 .p-main{grid-column:6/13;grid-row:1}
+.p2 .p-aside{grid-column:1/5;grid-row:1;display:grid;gap:40px}
+.p-info{display:grid;gap:18px}
+.p-meta{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;font:500 12px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--warm-grey)}
+.p-meta .no{font:italic 400 22px/1 var(--display);letter-spacing:0;color:var(--bronze);text-transform:none}
+.p-title{font-size:clamp(34px,3.4vw,50px);line-height:1.05}
+.p-desc{font-size:16px;color:var(--ink-2);line-height:1.7}
+.p-feats{list-style:none;margin:4px 0 8px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.p-feats li{font-size:13px;letter-spacing:.04em;color:var(--ink-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+@media (max-width:900px){
+  .project{gap:28px}
+  .p1 .p-main,.p1 .p-aside,.p2 .p-main,.p2 .p-aside{grid-column:1/-1;grid-row:auto;margin-top:0}
+  .p-main{margin-inline:calc(var(--gut) * -1)}
+  .p-aside{gap:32px!important}
+  .p-aside .p-side{order:2}
+  .p-side .pfig,.p2 .p-side .pfig{aspect-ratio:4/3}
+  .pfig .hover-tag{display:none}
+}
+
+/* Details */
+.details{margin-top:clamp(100px,12vw,180px);border-top:1px solid var(--line);padding-top:40px}
+.details-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px 24px;margin-bottom:32px}
+.details-head h3{font-size:clamp(28px,2.8vw,40px)}
+.details-head p{font-size:15px;color:var(--warm-grey);max-width:44ch}
+.detail-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.detail{margin:0}
+.detail .frame{aspect-ratio:3/4;overflow:hidden;background:var(--line)}
+.detail img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.detail:hover img{transform:scale(1.04)}
+.detail figcaption{margin-top:14px;display:grid;gap:4px}
+.detail figcaption b{font:400 20px/1.3 var(--display)}
+.detail figcaption span{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--warm-grey)}
+.d1 img{object-position:50% 22%}
+.d2 img{object-position:48% 46%}
+.d3 img{object-position:68% 44%}
+@media (max-width:760px){
+  .detail-row{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(var(--gut) * -1);padding-inline:var(--gut);scroll-padding-inline:var(--gut);padding-bottom:8px;scrollbar-width:none}
+  .detail-row::-webkit-scrollbar{display:none}
+  .detail{scroll-snap-align:start}
+}
+
+/* Process */
+.process{background:var(--paper);padding-block:clamp(88px,11vw,160px)}
+.process-head{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end;margin-bottom:clamp(48px,6vw,80px)}
+.process-head > div{grid-column:1/8;display:grid;gap:22px}
+.process-head .lede{grid-column:9/13;font-size:16.5px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:24px;counter-reset:step}
+.step{border-top:1px solid var(--charcoal);padding-top:22px;display:grid;gap:12px;align-content:start;counter-increment:step}
+.step::before{content:counter(step,decimal-leading-zero);font:italic 400 40px/1 var(--display);color:var(--bronze)}
+.step h3{font-size:22px;line-height:1.2}
+.step p{font-size:15px;color:var(--ink-2);line-height:1.65}
+@media (max-width:1100px){.steps{grid-template-columns:repeat(3,1fr);row-gap:48px}}
+@media (max-width:900px){.process-head > div,.process-head .lede{grid-column:1/-1}}
+@media (max-width:640px){
+  .steps{grid-template-columns:1fr;row-gap:0}
+  .step{grid-template-columns:64px 1fr;column-gap:8px;padding-block:22px}
+  .step::before{grid-row:1/3;font-size:32px}
+}
+
+/* Contact */
+.contact{background:var(--charcoal);color:var(--ivory);padding-block:clamp(88px,11vw,160px)}
+.contact-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:start}
+.contact-main{grid-column:1/7;display:grid;gap:30px}
+.contact .eyebrow{color:var(--bronze-lt)}
+.contact .h2{font-size:clamp(44px,6.4vw,96px);line-height:1}
+.contact .h2 em{color:var(--bronze-lt)}
+.contact .lede{color:#CFC7BC}
+.contact-cta{display:flex;flex-wrap:wrap;gap:14px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px;border-top:1px solid var(--line-dark);padding-top:30px;margin-top:10px}
+.fact dt{font:500 11.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:#9A9187;margin-bottom:10px}
+.fact dd{margin:0;font-size:16.5px;line-height:1.6}
+.fact .brand{font:500 14px/1.6 var(--sans);letter-spacing:.2em}
+.fact a{text-decoration:none;border-bottom:1px solid var(--line-dark)}
+.fact a:hover{border-color:var(--bronze-lt)}
+.num{font-variant-numeric:tabular-nums;letter-spacing:.03em;user-select:all}
+.copy-btn{margin-left:10px;background:none;border:1px solid var(--line-dark);color:#CFC7BC;font:500 10.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:6px 10px;cursor:pointer;vertical-align:2px}
+.copy-btn:hover{border-color:var(--bronze-lt);color:var(--ivory)}
+
+.brief{grid-column:8/13;background:var(--ivory);color:var(--charcoal);padding:clamp(26px,3vw,40px)}
+.brief h3{font-size:30px;line-height:1.1}
+.brief > p{margin-top:10px;font-size:15px;color:var(--ink-2)}
+.brief form{margin-top:26px;display:grid;gap:18px}
+.field{display:grid;gap:8px}
+.field label{font:500 11.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--warm-grey)}
+.field input,.field select,.field textarea{width:100%;font:400 16px/1.4 var(--sans);color:var(--charcoal);background:transparent;border:0;border-bottom:1px solid #BFB5A7;padding:10px 0;border-radius:0;appearance:none;-webkit-appearance:none}
+.field select{background-image:linear-gradient(45deg,transparent 50%,var(--charcoal) 50%),linear-gradient(135deg,var(--charcoal) 50%,transparent 50%);background-position:calc(100% - 10px) 55%,calc(100% - 5px) 55%;background-size:5px 5px;background-repeat:no-repeat;padding-right:24px}
+.field textarea{resize:vertical;min-height:84px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--bronze)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.brief .btn{width:100%;margin-top:8px}
+.brief small{display:block;font-size:12.5px;color:var(--warm-grey);line-height:1.5}
+@media (max-width:980px){.contact-main,.brief{grid-column:1/-1}.brief{margin-top:40px}}
+@media (max-width:520px){.facts,.row2{grid-template-columns:1fr}.contact-cta .btn{flex:1 1 100%}}
+
+/* Footer */
+.footer{background:#171513;color:#A69D92;padding-block:48px calc(48px + env(safe-area-inset-bottom,0px));font-size:14px}
+.footer .wrap{display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:center}
+.footer .logo{color:var(--ivory)}
+.footer nav{display:flex;flex-wrap:wrap;gap:10px 26px}
+.footer nav a{text-decoration:none;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.footer nav a:hover{color:var(--ivory)}
+
+/* Floating WhatsApp (mobile) */
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:none;align-items:center;gap:10px;background:var(--bronze);color:var(--white);text-decoration:none;font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:0 20px;min-height:52px;box-shadow:0 10px 30px rgba(20,16,12,.28);transition:opacity .3s,transform .3s}
+.fab svg{width:18px;height:18px}
+.fab.hide{opacity:0;transform:translateY(12px);pointer-events:none}
+@media (max-width:980px){.fab{display:inline-flex}}
+
+/* Project viewer */
+.viewer{position:fixed;inset:0;z-index:70;background:var(--paper);overflow-y:auto;overscroll-behavior:contain;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.viewer-bar{position:sticky;top:0;z-index:2;background:rgba(250,248,244,.96);border-bottom:1px solid var(--line)}
+.viewer-bar .wrap{display:flex;justify-content:space-between;align-items:center;height:68px;gap:16px}
+.viewer-bar .logo b{font-size:19px}
+.viewer-close{display:inline-flex;align-items:center;gap:10px;background:none;border:0;cursor:pointer;font:500 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--charcoal);min-height:44px}
+.viewer-close span{font-size:24px;font-weight:300;line-height:1}
+.v-head{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;padding-block:clamp(40px,6vw,80px) clamp(32px,4vw,56px)}
+.v-head .left{grid-column:1/8;display:grid;gap:18px}
+.v-head .right{grid-column:9/13;display:grid;gap:20px;align-content:end}
+.v-head h2{font-size:clamp(42px,6vw,88px);line-height:1}
+.v-imgs{display:grid;gap:clamp(20px,3vw,40px);padding-bottom:40px}
+.v-imgs figure{margin:0}
+.v-imgs img{width:100%;height:auto;max-height:88svh;object-fit:contain;background:#23201D}
+.v-imgs figcaption{margin-top:12px;font:italic 400 15px/1.5 var(--display);color:var(--warm-grey)}
+.v-foot{border-top:1px solid var(--line);padding-block:32px 56px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+@media (max-width:900px){.v-head .left,.v-head .right{grid-column:1/-1}.v-imgs{margin-inline:calc(var(--gut) * -1)}.v-imgs figcaption{padding-inline:var(--gut)}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M9 9.2c.2 2.6 3.1 5.6 5.8 5.8l1.2-1.4-2-1-1 .9c-1-.4-2.1-1.5-2.5-2.5l.9-1-1-2Z"/></symbol>
+</svg>
+
+<header class="site-header" id="top-bar">
+  <div class="wrap nav-row">
+    <a class="logo" href="#home" aria-label="EROS INTERIOR, home"><b>EROS</b><span>INTERIOR</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-bronze nav-cta" href="https://wa.me/918101208512" target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>WhatsApp Us</a>
+    </nav>
+    <button class="menu-btn" id="menu-open" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="top">
+    <a class="logo" href="#home"><b>EROS</b><span>INTERIOR</span></a>
+    <button class="close-btn" id="menu-close" aria-label="Close menu">&times;</button>
+  </div>
+  <nav aria-label="Mobile">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="mm-foot">
+    <a class="btn btn-bronze" href="https://wa.me/918101208512" target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>WhatsApp Us</a>
+    <div>Regent Market, Amtala, 1st Floor<br>West Bengal, India<br><span class="num">+91 81012 08512</span></div>
+  </div>
+</div>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home" aria-label="Introduction">
+  <picture class="hero-media">
+    <source media="(max-width: 760px)" srcset="images/eros-residence-feature-wall.jpg">
+    <img src="images/eros-residence-living-room.jpg" alt="Completed living room by EROS INTERIOR with a backlit Radha-Krishna feature wall, cream sofa, pooja unit and custom storage" fetchpriority="high">
+  </picture>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">EROS INTERIOR &bull; Interior Design Studio</p>
+    <h1>Spaces Designed <em>Around You.</em></h1>
+    <p class="hero-copy">Thoughtfully designed interiors that bring together functionality, comfort and timeless character.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-ivory" href="#projects">Explore Our Work <span class="arr" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn-ghost-light" href="https://wa.me/918101208512" target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>WhatsApp Us</a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <div class="wrap">
+      <span>Residential</span>
+      <span>Office &amp; Commercial</span>
+      <span class="hide-sm">Regent Market, Amtala</span>
+      <span class="cap">Pictured: Contemporary Residence, West Bengal</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-text">
+      <p class="eyebrow">About the Studio</p>
+      <h2 class="h2">Interior Design <em>With Character.</em></h2>
+      <p class="lede">At Eros Interior, we create thoughtfully designed spaces that balance aesthetics, comfort and everyday functionality. From residential interiors to workspaces, every project is approached with attention to detail and a focus on creating spaces that feel personal.</p>
+      <p class="lede">We work on homes, offices and commercial spaces, and we carry the work from the first design conversation through to execution on site, so the finished room matches what was planned.</p>
+      <div><a class="link-arrow" href="#contact">Start Your Project <span class="arr" aria-hidden="true">&rarr;</span></a></div>
+    </div>
+    <figure class="about-fig">
+      <div class="frame"><img src="images/eros-office-workspace.jpg" alt="Recessed octagonal wall niches with botanical artwork in an office by EROS INTERIOR" loading="lazy"></div>
+      <figcaption class="figcap">Recessed art niches, Modern Office Interior</figcaption>
+    </figure>
+    <div class="principles">
+      <div><h3>Planned around you</h3><p>Layouts, storage and lighting follow how you actually use the space every day.</p></div>
+      <div><h3>Made to measure</h3><p>Furniture, units and feature walls are built for the room they sit in.</p></div>
+      <div><h3>Design through execution</h3><p>One studio handles the design and the work on site, from ceiling to finishing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap svc-grid">
+    <div class="svc-head">
+      <p class="eyebrow">Services</p>
+      <h2 class="h2">What We <em>Design.</em></h2>
+      <p class="lede">From a single feature wall to a complete home or office, we plan the space and see it through.</p>
+      <div><a class="btn btn-dark" href="#contact">Start Your Project <span class="arr" aria-hidden="true">&rarr;</span></a></div>
+    </div>
+    <div class="svc-list">
+      <div class="svc-group">
+        <p class="svc-group-label">Homes</p>
+        <div class="svc"><h3>Residential Interior Design</h3><p>Complete interior planning for apartments and houses, covering layout, materials, lighting and furniture.</p></div>
+        <div class="svc"><h3>Living Room Design</h3><p>Living spaces planned for comfort and gathering, with seating, storage and a clear focal point.</p></div>
+        <div class="svc"><h3>Bedroom Interior</h3><p>Calm, well-organised bedrooms with wardrobes, headboard walls and soft, layered lighting.</p></div>
+        <div class="svc"><h3>Modular Kitchen</h3><p>Practical kitchen layouts with durable finishes, smart storage and surfaces that are easy to maintain.</p></div>
+      </div>
+      <div class="svc-group">
+        <p class="svc-group-label">Details &amp; Joinery</p>
+        <div class="svc"><h3>TV Unit &amp; Feature Walls</h3><p>Custom TV units, panelled walls and backlit feature walls that give a room its identity.</p></div>
+        <div class="svc"><h3>False Ceiling &amp; Lighting</h3><p>Ceiling designs with cove lighting, spotlights and ambient layers, planned together with the room.</p></div>
+        <div class="svc"><h3>Custom Furniture</h3><p>Sofas, storage, desks and units made to measure for your space and the way you use it.</p></div>
+      </div>
+      <div class="svc-group">
+        <p class="svc-group-label">Workspaces</p>
+        <div class="svc"><h3>Office Interior</h3><p>Workspaces with custom workstations, storage and feature walls that suit how your team works.</p></div>
+        <div class="svc"><h3>Commercial Interior</h3><p>Shops, showrooms and client-facing spaces designed to be practical, durable and memorable.</p></div>
+      </div>
+      <div class="svc-group">
+        <p class="svc-group-label">Delivery</p>
+        <div class="svc"><h3>Complete Interior Execution</h3><p>Carpentry, false ceiling, electrical and lighting, finishes and furniture, carried out and coordinated on site through to handover.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="work" id="projects">
+  <div class="wrap">
+    <div class="work-head">
+      <div>
+        <p class="eyebrow">From Our Portfolio</p>
+        <h2 class="h2-xl">Selected <em>Work.</em></h2>
+      </div>
+      <p class="lede">Completed interiors, photographed on site. One home and one workspace, each shaped around the people who use it.</p>
+    </div>
+
+    <article class="project p1" aria-labelledby="p1-title">
+      <div class="p-main">
+        <button class="pfig" data-project="residence" aria-label="View project: Contemporary Residence">
+          <img src="images/eros-residence-living-room.jpg" alt="Living room with backlit Radha-Krishna feature wall, cream channel-tufted sofa, pooja unit and TV storage wall" loading="lazy" style="object-position:50% 50%">
+          <span class="hover-tag"><span>Contemporary Residence</span><span class="arr" aria-hidden="true">View Project &rarr;</span></span>
+        </button>
+      </div>
+      <div class="p-aside">
+        <div class="p-info">
+          <p class="p-meta"><span class="no">01</span><span>Residential Interior</span><span>West Bengal</span></p>
+          <h3 class="p-title" id="p1-title">Contemporary Residence</h3>
+          <p class="p-desc">A thoughtfully designed residential interior combining warm ambient lighting, custom furniture, contemporary storage and a distinctive illuminated feature wall. The design brings together comfort, functionality and a strong visual identity.</p>
+          <ul class="p-feats">
+            <li>Illuminated feature wall</li><li>Custom sofa</li><li>TV &amp; storage unit</li><li>False ceiling</li><li>Marble-look flooring</li><li>Warm ambient lighting</li>
+          </ul>
+          <div><button class="link-arrow" data-project="residence">View Project <span class="arr" aria-hidden="true">&rarr;</span></button></div>
+        </div>
+        <div class="p-side">
+          <button class="pfig" data-project="residence" data-index="1" aria-label="View project: Contemporary Residence, feature wall">
+            <img src="images/eros-residence-feature-wall.jpg" alt="Backlit Radha-Krishna relief panel above the sofa, glowing warm in evening light" loading="lazy" style="object-position:50% 34%">
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="project p2" aria-labelledby="p2-title">
+      <div class="p-main">
+        <button class="pfig" data-project="office" aria-label="View project: Modern Office Interior">
+          <img src="images/eros-office-workspace.jpg" alt="Office with geometric wood and mirror feature wall, mint-topped custom desk, leather chair and recessed art niches" loading="lazy" style="object-position:50% 50%">
+          <span class="hover-tag"><span>Modern Office Interior</span><span class="arr" aria-hidden="true">View Project &rarr;</span></span>
+        </button>
+      </div>
+      <div class="p-aside">
+        <div class="p-info">
+          <p class="p-meta"><span class="no">02</span><span>Office Interior</span><span>West Bengal</span></p>
+          <h3 class="p-title" id="p2-title">Modern Office Interior</h3>
+          <p class="p-desc">A contemporary office interior designed around functionality and visual character, combining custom woodwork, geometric detailing, decorative niches and layered lighting to create a refined working environment.</p>
+          <ul class="p-feats">
+            <li>Geometric wooden feature wall</li><li>Decorative wall niches</li><li>Custom workstation</li><li>False ceiling</li><li>Warm wood tones</li><li>Layered lighting</li>
+          </ul>
+          <div><button class="link-arrow" data-project="office">View Project <span class="arr" aria-hidden="true">&rarr;</span></button></div>
+        </div>
+        <div class="p-side">
+          <button class="pfig" data-project="office" data-index="1" aria-label="View project: Modern Office Interior, ceiling">
+            <img src="images/eros-office-ceiling.jpg" alt="Hexagonal false ceiling with cove lighting above a fluted wood-panel wall" loading="lazy" style="object-position:40% 40%">
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <div class="details" aria-labelledby="details-title">
+      <div class="details-head">
+        <h3 id="details-title">In the Details</h3>
+        <p>Close views from the same two projects: the ceilings, walls and lighting that give each room its character.</p>
+      </div>
+      <div class="detail-row">
+        <figure class="detail d1">
+          <div class="frame"><img src="images/eros-office-ceiling.jpg" alt="Hexagonal false ceiling pattern with concealed cove lighting" loading="lazy"></div>
+          <figcaption><b>Hexagonal false ceiling with cove lighting</b><span>Modern Office Interior</span></figcaption>
+        </figure>
+        <figure class="detail d2">
+          <div class="frame"><img src="images/eros-residence-feature-wall.jpg" alt="Radha-Krishna relief feature wall with warm backlighting" loading="lazy"></div>
+          <figcaption><b>Backlit relief feature wall</b><span>Contemporary Residence</span></figcaption>
+        </figure>
+        <figure class="detail d3">
+          <div class="frame"><img src="images/eros-office-workspace.jpg" alt="Octagonal recessed niches with botanical line artwork" loading="lazy"></div>
+          <figcaption><b>Recessed octagonal art niches</b><span>Modern Office Interior</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="process-head">
+      <div>
+        <p class="eyebrow">Process</p>
+        <h2 class="h2">From First Conversation <em>to Handover.</em></h2>
+      </div>
+      <p class="lede">A clear sequence, so you know what happens next at every stage of your project.</p>
+    </div>
+    <ol class="steps">
+      <li class="step"><h3>Talk to us</h3><p>Share your space and what you need on WhatsApp, or visit us at Regent Market, Amtala.</p></li>
+      <li class="step"><h3>Visit &amp; measure</h3><p>We see the space, take measurements and understand how it will be used.</p></li>
+      <li class="step"><h3>Design &amp; materials</h3><p>Layout, design direction, finishes and lighting are worked out and shared with you for approval.</p></li>
+      <li class="step"><h3>Execution</h3><p>Carpentry, ceiling, lighting, finishes and furniture are carried out on site.</p></li>
+      <li class="step"><h3>Handover</h3><p>Final detailing and a walkthrough of your completed space together.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-main">
+      <p class="eyebrow">Contact</p>
+      <h2 class="h2">Let's Design <em>Your Space.</em></h2>
+      <p class="lede">Have a home, office or commercial space in mind? Talk to Eros Interior and let's discuss your requirements.</p>
+      <div class="contact-cta">
+        <a class="btn btn-bronze" href="https://wa.me/918101208512" target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>Chat on WhatsApp</a>
+        <a class="btn btn-ghost-light" href="https://www.google.com/maps/search/?api=1&amp;query=Regent+Market+Amtala+West+Bengal" target="_blank" rel="noopener">Get Directions <span class="arr" aria-hidden="true">&rarr;</span></a>
+      </div>
+      <dl class="facts">
+        <div class="fact"><dt>Studio</dt><dd><span class="brand">EROS INTERIOR</span><br>Regent Market, Amtala<br>1st Floor<br>West Bengal, India</dd></div>
+        <div class="fact">
+          <dt>Phone</dt>
+          <dd><a class="num" href="tel:+918101208512">+91 81012 08512</a><button class="copy-btn" type="button" data-copy="+91 81012 08512">Copy</button></dd>
+          <dt style="margin-top:24px">WhatsApp</dt>
+          <dd><a class="num" href="https://wa.me/918101208512" target="_blank" rel="noopener">+91 81012 08512</a></dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="brief" id="start">
+      <h3>Start Your Project</h3>
+      <p>Tell us a little about your space. This opens WhatsApp with your details filled in, ready to send.</p>
+      <form id="brief-form" novalidate>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Full name"></div>
+        <div class="row2">
+          <div class="field"><label for="f-type">Space</label>
+            <select id="f-type" name="type">
+              <option>Home / Apartment</option>
+              <option>Living Room</option>
+              <option>Bedroom</option>
+              <option>Modular Kitchen</option>
+              <option>Office</option>
+              <option>Commercial Space</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-loc">Location</label><input id="f-loc" name="location" type="text" placeholder="Area / city"></div>
+        </div>
+        <div class="field"><label for="f-msg">Requirements</label><textarea id="f-msg" name="message" placeholder="Rooms, work needed, timeline"></textarea></div>
+        <a class="btn btn-dark" id="brief-send" href="https://wa.me/918101208512" target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>Send on WhatsApp</a>
+        <small>Messages go directly to +91 81012 08512.</small>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="logo" href="#home"><b>EROS</b><span>INTERIOR</span></a>
+    <nav aria-label="Footer">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#contact">Contact</a>
+    </nav>
+    <p>Regent Market, Amtala, 1st Floor, West Bengal &middot; <span class="num">+91 81012 08512</span></p>
+    <p>&copy; <span id="yr">2026</span> EROS INTERIOR</p>
+  </div>
+</footer>
+
+<a class="fab" id="fab" href="https://wa.me/918101208512" target="_blank" rel="noopener" aria-label="WhatsApp Us"><svg><use href="#i-chat"/></svg>WhatsApp Us</a>
+
+<!-- Project viewer -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="v-title" hidden>
+  <div class="viewer-bar"><div class="wrap">
+    <span class="logo"><b>EROS</b><span>INTERIOR</span></span>
+    <button class="viewer-close" id="viewer-close">Close <span aria-hidden="true">&times;</span></button>
+  </div></div>
+  <div class="wrap">
+    <div class="v-head">
+      <div class="left">
+        <p class="p-meta" id="v-meta"></p>
+        <h2 id="v-title"></h2>
+      </div>
+      <div class="right">
+        <p class="p-desc" id="v-desc"></p>
+        <ul class="p-feats" id="v-feats"></ul>
+      </div>
+    </div>
+    <div class="v-imgs" id="v-imgs"></div>
+    <div class="v-foot">
+      <button class="link-arrow" id="v-next"></button>
+      <a class="btn btn-bronze" href="https://wa.me/918101208512" target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>Discuss a Similar Project</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var WA = "918101208512";
+  var header = document.getElementById("top-bar");
+  var fab = document.getElementById("fab");
+  var contact = document.getElementById("contact");
+  function onScroll(){
+    header.classList.toggle("solid", window.scrollY > 40);
+    var r = contact.getBoundingClientRect();
+    fab.classList.toggle("hide", r.top < window.innerHeight * 0.85 && r.bottom > 0);
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+
+  // Mobile menu
+  var menu = document.getElementById("mobile-menu"), openBtn = document.getElementById("menu-open");
+  function setMenu(open){
+    menu.hidden = !open; openBtn.setAttribute("aria-expanded", String(open));
+    document.body.style.overflow = open ? "hidden" : "";
+    if(open) document.getElementById("menu-close").focus();
+  }
+  openBtn.addEventListener("click", function(){ setMenu(true); });
+  document.getElementById("menu-close").addEventListener("click", function(){ setMenu(false); openBtn.focus(); });
+  menu.querySelectorAll("a[href^='#']").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+
+  // Projects
+  var projects = {
+    residence: {
+      no:"01", title:"Contemporary Residence", cat:"Residential Interior", loc:"West Bengal",
+      desc:"A thoughtfully designed residential interior combining warm ambient lighting, custom furniture, contemporary storage and a distinctive illuminated feature wall. The design brings together comfort, functionality and a strong visual identity.",
+      feats:["Illuminated Radha-Krishna feature wall","Custom sofa","TV & storage unit","False ceiling","Marble-look flooring","Warm ambient lighting"],
+      imgs:[
+        {src:"images/eros-residence-living-room.jpg", alt:"Full living room with feature wall, pooja unit, sofa, upholstered TV wall and overhead storage", cap:"The living room: backlit feature wall, pooja unit, custom sofa, and the upholstered TV wall with overhead storage."},
+        {src:"images/eros-residence-feature-wall.jpg", alt:"Radha-Krishna relief feature wall glowing with warm backlight above the sofa", cap:"The illuminated feature wall in evening light, framed above the custom sofa."}
+      ],
+      next:"office"
+    },
+    office: {
+      no:"02", title:"Modern Office Interior", cat:"Office Interior", loc:"West Bengal",
+      desc:"A contemporary office interior designed around functionality and visual character, combining custom woodwork, geometric detailing, decorative niches and layered lighting to create a refined working environment.",
+      feats:["Geometric wooden feature wall","Decorative wall niches","Custom workstation","False ceiling","Warm wood tones","Contemporary lighting"],
+      imgs:[
+        {src:"images/eros-office-workspace.jpg", alt:"Office with geometric wood and mirror wall, custom desk, leather chair and octagonal art niches", cap:"The workspace: geometric wood-and-mirror feature wall, custom desk and recessed art niches."},
+        {src:"images/eros-office-ceiling.jpg", alt:"Hexagonal false ceiling with cove lighting above fluted wood paneling", cap:"The hexagonal false ceiling with concealed cove lighting and recessed spotlights."}
+      ],
+      next:"residence"
+    }
+  };
+  var viewer = document.getElementById("viewer"), lastFocus = null;
+  function el(tag, attrs, text){ var e=document.createElement(tag); for(var k in attrs||{}) e.setAttribute(k, attrs[k]); if(text) e.textContent=text; return e; }
+  function openProject(key, index){
+    var p = projects[key]; if(!p) return;
+    lastFocus = lastFocus || document.activeElement;
+    var meta = document.getElementById("v-meta"); meta.innerHTML="";
+    meta.appendChild(el("span",{class:"no"},p.no)); meta.appendChild(el("span",{},p.cat)); meta.appendChild(el("span",{},p.loc));
+    document.getElementById("v-title").textContent = p.title;
+    document.getElementById("v-desc").textContent = p.desc;
+    var f = document.getElementById("v-feats"); f.innerHTML="";
+    p.feats.forEach(function(t){ f.appendChild(el("li",{},t)); });
+    var box = document.getElementById("v-imgs"); box.innerHTML="";
+    p.imgs.forEach(function(im, i){
+      var fig = el("figure",{id:"v-img-"+i}); var img = el("img",{src:im.src, alt:im.alt});
+      fig.appendChild(img); fig.appendChild(el("figcaption",{},im.cap)); box.appendChild(fig);
+    });
+    var nx = document.getElementById("v-next");
+    nx.innerHTML = ""; nx.appendChild(document.createTextNode("Next: " + projects[p.next].title + " "));
+    nx.appendChild(el("span",{class:"arr","aria-hidden":"true"},"→"));
+    nx.dataset.next = p.next;
+    viewer.hidden = false; document.body.style.overflow = "hidden";
+    viewer.scrollTop = 0;
+    if(index){ var t = document.getElementById("v-img-"+index); if(t) setTimeout(function(){ viewer.scrollTop = t.offsetTop - 80; }, 30); }
+    document.getElementById("viewer-close").focus();
+  }
+  function closeProject(){
+    viewer.hidden = true; document.body.style.overflow = "";
+    if(lastFocus && lastFocus.focus) lastFocus.focus(); lastFocus = null;
+  }
+  document.querySelectorAll("[data-project]").forEach(function(b){
+    b.addEventListener("click", function(){ lastFocus = b; openProject(b.dataset.project, +(b.dataset.index||0)); });
+  });
+  document.getElementById("viewer-close").addEventListener("click", closeProject);
+  document.getElementById("v-next").addEventListener("click", function(){ openProject(this.dataset.next, 0); });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){ if(!viewer.hidden) closeProject(); else if(!menu.hidden){ setMenu(false); openBtn.focus(); } }
+  });
+
+  // Brief -> WhatsApp message
+  var send = document.getElementById("brief-send");
+  var form = document.getElementById("brief-form");
+  function v(id){ return document.getElementById(id).value.trim(); }
+  function updateLink(){
+    var lines = ["Hello EROS INTERIOR, I'd like to discuss an interior project."];
+    if(v("f-name")) lines.push("Name: " + v("f-name"));
+    lines.push("Space: " + v("f-type"));
+    if(v("f-loc")) lines.push("Location: " + v("f-loc"));
+    if(v("f-msg")) lines.push("Requirements: " + v("f-msg"));
+    send.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(lines.join("\n"));
+  }
+  form.addEventListener("input", updateLink); form.addEventListener("change", updateLink);
+  form.addEventListener("submit", function(e){ e.preventDefault(); });
+  updateLink();
+
+  // Copy phone
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var txt = b.dataset.copy;
+      function done(){ b.textContent = "Copied"; setTimeout(function(){ b.textContent = "Copy"; }, 1600); }
+      function fallback(){ var r=document.createRange(); r.selectNodeContents(b.previousElementSibling); var s=getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent="Selected"; setTimeout(function(){ b.textContent="Copy"; }, 1600); }
+      try { navigator.clipboard.writeText(txt).then(done, fallback); } catch(err){ fallback(); }
+    });
+  });
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
